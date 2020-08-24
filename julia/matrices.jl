@@ -5,6 +5,10 @@ v = [1 2 3 4] # size = (1,4)
 v = [1, 2, 3, 4] # size = (4,)
 v = [1; 2; 3; 4] # size = (4,)
 
+# Transform a column vector to a row vector
+v_col = [1, 2, 3, 4]
+v_row = reshape(v_col, 1, length(v_col))
+
 # Initialize matrix with undefinded values
 no_rows = 10
 no_cols = 5
