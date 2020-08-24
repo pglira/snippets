@@ -29,3 +29,6 @@ no_rows = size(A)[1]
 A = rand(10, 5)
 row_1_dim = A[1,:] # size = (5,), i.e. it is 1-dimensional
 row_2_dim = A[1:1,:] # size = (1,5), i.e. it is 2-dimensional
+
+# Matrix of ones
+A = ones(10, 5)
