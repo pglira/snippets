@@ -20,9 +20,10 @@ no_rows = 10
 no_cols = 5
 A = fill(NaN, no_rows, no_cols)
 
-# Number of rows
+# Number of rows and cols
 A = rand(10, 5)
 no_rows = size(A)[1]
+no_cols = size(A)[2]
 
 # Attention: slicing can decrease dimension
 # https://github.com/JuliaLang/julia/issues/5949
