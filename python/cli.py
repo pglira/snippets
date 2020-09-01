@@ -31,6 +31,8 @@ def parse_args(args_in):
                         type=path_to_dir)
     parser.add_argument('-i', '--integer', help='An optional integer', dest='integer',
                         required=False, type=int, default=100)
+    parser.add_argument('-l', '--float', help='An optional float', dest='float',
+                        required=False, type=float, default=1.234)
     args = parser.parse_args(args_in)
 
     return args
