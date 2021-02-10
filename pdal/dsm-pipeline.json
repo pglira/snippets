@@ -1,0 +1,12 @@
+{
+    "pipeline": [
+        "./testdata/G111.las",
+        {
+            "filename":"./outputs/G111_dsm.tif",
+            "gdaldriver":"GTiff",
+            "output_type":"all",
+            "resolution":"0.5",
+            "type": "writers.gdal"
+        }
+    ]
+}
