@@ -23,13 +23,14 @@ pdal pipeline dsm-pipeline.json \
   --writers.gdal.filename=./outputs/G112_dsm.tif
 
 # Iterate over multiple files with substitution
-for lasfile in ./testdata/G11*.las
+cd ./testdata
+for lasfile in G11*.las
 do
     echo "Process \"${lasfile}\""
     file_without_ext="${lasfile%.*}"
-    dsmfile=${file_without_ext}.tif
-    dsmshdfile=${file_without_ext}_shd.tif
-    pdal pipeline dsm-pipeline.json \
+    dsmfile=../outputs/${file_without_ext}.tif
+    dsmshdfile=../outputs/${file_without_ext}_shd.tif
+    pdal pipeline ../dsm-pipeline.json \
       --readers.las.filename=${lasfile} \
       --writers.gdal.filename=${dsmfile}
     gdaldem hillshade -b 4 ${dsmfile} ${dsmshdfile}
