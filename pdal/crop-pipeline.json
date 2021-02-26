@@ -1,0 +1,8 @@
+[
+    "./testdata/G111.las",
+    {
+        "type":"filters.crop",
+        "bounds":"([-2100,-1900],[338900,339000])"
+    },
+    "./outputs/G111_cropped.las"
+]
